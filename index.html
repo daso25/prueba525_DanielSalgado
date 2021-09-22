@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a85681e050.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Prueba 525</title>
+</head>
+
+<body>
+    <h1 class="titulo-principal">formulario de contacto</h1>
+    <div class="contenedor">
+        <h2 class="titulos-secundario">contacto</h2>
+        <div class="formulario-contacto">
+            <div class="contacto">
+                <div class="item-contacto">
+                    <i class="far fa-envelope"></i>
+                    <p>consulta@correo.com</p>
+                </div>
+                <div class="item-contacto">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Av 16 de Julio # 12 - 5</p>
+                </div>
+                <div class="item-contacto">
+                    <i class="fas fa-phone"></i>
+                    <p>321654987</p>
+                </div>
+                <p class="item-contacto">56683662</p>
+
+                <div class="redes-sociales">
+                    <a href="#">
+                        <div class="red"><i class="fab fa-facebook"></i></div>
+                    </a>
+                    <a href="#">
+                        <div class="red"><i class="fab fa-twitter"></i></div>
+                    </a>
+                    <a href="#">
+                        <div class="red"><i class="fab fa-instagram"></i></div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="formulario">
+                <form class="formulario-campos" id="formu">
+                    <div class="formulario-grupo">
+                        <div class="sexo-contenedor">
+                            <label for="sexo">Sexo</label>
+                            <select name="sexo" id="sexo" required>
+                                <option value="1" disabled selected>--Seleccione una opción--</option>
+                                <option value="M">Hombre</option>
+                                <option value="F">Mujer</option>
+                            </select>
+                        </div>
+                        <div class="nacimiento">
+                            <label for="nacimiento">Fecha nacimiento*</label>
+                            <input type="date" name="nacimiento" id="nacimiento" required>
+                        </div>
+                    </div>
+                    <div class="formulario-grupo">
+                        <div class="nombre-contenedor">
+                            <label for="nombre">Nombre*</label>
+                            <input type="text" name="nombre" id="nombre" required autocomplete="name">
+                        </div>
+                        <div class="apellido-contenedor">
+                            <label for="apellido">Apellido*</label>
+                            <input type="text" name="apellido" id="apellido" required >
+                        </div>
+                    </div>
+                    <label for="email">Email*</label>
+                    <input type="email" required name="email" id="email">
+                    <label for="direccion">Dirección*</label>
+                    <input type="text" required name="direccion" id="direccion">
+
+                    <div class="formulario-grupo">
+                        <div class="apto-contenedor">
+                            <label for="apto">Casa/apto</label>
+                            <input type="text" name="apto" id="apto">
+                        </div>
+
+                        <div class="pais-contenedor">
+                            <label for="pais">Pais*</label>
+                            <select name="pais" id="pais" required>
+                                <option value="0" disabled selected></option>
+                                <option value="col">Colombia</option>
+                                <option value="Arg">Argentina</option>
+                                <option value="Mex">México</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="formulario-grupo dep-ciu">
+                        <div class="departamento-contenedor" id="departamento-contenedor">
+                            <label for="departamento">Departamento*</label>
+                            <select name="departamento" id="departamento" required>
+                                <option value=" " selected disabled></option>
+                                <option value="Valle">Valle del Cauca</option>
+                                <option value="Ant">Antioquia</option>
+                                <option value="Cund">Cundinamarca</option>
+                            </select>
+                        </div>
+                        <div class="ciudad-contenedor">
+                            <label for="ciudad">Ciudad*</label>
+                            <select name="ciudad" id="ciudad" required>
+                                <option value=" " selected disabled></option>
+                                <option value="Valle">Cali</option>
+                                <option value="Ant">Medellin</option>
+                                <option value="Cund">Bogota</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label for="comentarios">Comentarios*</label>
+                    <textarea name="comentarios" id="comentarios" required></textarea>
+                    <div class="btn-enviar">
+                        <div class="enviar-contenedor">
+                            <input type="submit" class="enviar" id="enviar-btn">
+                        </div>
+                        <!-- https://es.stackoverflow.com/questions/371782/guardar-la-informaci%C3%B3n-en-un-json -->
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="tabla oculto">
+            <table class="table table-hover" id="tablaUsuarios">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Sexo</th>
+                        <th >Correo</th>
+                        <th>Pais</th>
+                        <th>Departamento</th>
+                        <th>Ciudad</th>
+                        <th>Dirección</th>
+                        <th>Comentarios</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./interfaz.js"></script>
+    <script src="./logica.js"></script>
+    <!-- <script src="./app.js"></script> -->
+</body>
+
+</html>
